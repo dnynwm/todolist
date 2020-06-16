@@ -14,9 +14,14 @@ body {
   font-family: sans-serif;
 }
 
+/* fix the grid to make the boxes at the end stay to the right,
+otherwise, try to use flexbox*/
+
 .list-container {
   display: grid;
-  grid-template-columns: 75% 90px;
+  grid-template-columns: 80% 90px;
+  justify-content: center; /*this seems to work?*/
+  /* justify-content: end; */
   /* display: flex; */
   max-width: 90vw;
   margin: auto;
@@ -43,5 +48,5 @@ li {
 
 .box {
   text-align: center;
-  justify-self: end;
+
 }
