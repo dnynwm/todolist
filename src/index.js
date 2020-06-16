@@ -8,3 +8,8 @@ document.getElementById("app").innerHTML = `
   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
 </div>
 `;
+
+/* Grab List Item*/
+
+let listItem = document.querySelectorAll(".list-item");
+
