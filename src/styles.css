@@ -4,9 +4,22 @@ body {
 
 .list-container {
   border: 2px solid turquoise;
+  border-radius: 10px;
 }
 
 ul {
   list-style: none;
 
+}
+
+li {
+  list-style: none;
+}
+
+.list-item {
+  margin-right: 1rem;
+  padding: 1rem;
+  margin-top: .5rem;
+  border: 2px solid turquoise;
+  border-radius: 10px;
 }
