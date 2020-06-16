@@ -16,7 +16,10 @@ body {
 
 .list-container {
   display: grid;
-  grid-template-columns: auto 10%;
+  grid-template-columns: 75% 90px;
+  /* display: flex; */
+  max-width: 90vw;
+  margin: auto;
   border: 2px solid turquoise;
   border-radius: 10px;
   background-color: #ebfbfa;
@@ -31,14 +34,14 @@ li {
 }
 
 .list-item, .box {
-  margin-right: 1rem;
   padding: 1rem;
-  margin-top: .5rem;
+  margin: 1rem;
   border: 2px solid turquoise;
   border-radius: 10px;
   background-color: white;
 }
 
 .box {
-
+  text-align: center;
+  justify-self: end;
 }
