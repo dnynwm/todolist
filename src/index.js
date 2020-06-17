@@ -1,13 +1,4 @@
-import "./styles.css";
-
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+// import "./styles.css";
 
 /* GLOBAL VARIABLES */
 
@@ -19,8 +10,6 @@ document.getElementById("app").innerHTML = `
 
 // /* ADD ITEM BUTTON CLICK EVENT */
 
-<<<<<<< Updated upstream
-=======
 let addBtn = document.querySelector("[type=image]");
 let input = document.querySelector(".add-item");
 
@@ -31,6 +20,7 @@ addBtn.addEventListener("click", function(e) {
 });
 
 // List Item Template
+
 
 function createItem(newItem) {
 	const template = `<div class="list-item">
@@ -47,7 +37,14 @@ function createItem(newItem) {
 
 
 
->>>>>>> Stashed changes
+
+//Function that creates item to be added
+function createItem(item) {
+  //create div + parent of div + class list-item + input.value
+  // document.createElement("div");
+  document.querySelector(".list-item").innerHTML += input.value;
+}
+
 // //grabs add item button
 // const addItemBtn = document.getElementById("add-item-btn");
 
