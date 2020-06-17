@@ -62,7 +62,7 @@ otherwise, try to use flexbox*/
   /* justify-content: end; */
   /* display: flex; */
   max-width: 90vw;
-  margin: auto;
+  margin: 1rem auto;
   border: 2px solid turquoise;
   border-radius: 10px;
   background-color: #ebfbfa;
@@ -87,4 +87,17 @@ li { color:#5cd3cb; /*Dummy-color, please delete me*/
 .box {
   text-align: center;
 
+}
+
+.add-item {
+  width: 94%;
+  height: 27%
+}
+
+.add-item, .btn  {
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid turquoise;
+  border-radius: 10px;
+  background-color: white;
 }
