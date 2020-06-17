@@ -21,12 +21,20 @@ addBtn.addEventListener("click", function(e) {
 
 // List Item Template
 
+
 //Function that creates item to be added
 function createItem(item) {
   //create div + parent of div + class list-item + input.value
-  // document.createElement("div");
+
+  template.appendChild(document.createTextNode(input.value));
+
   document.querySelector(".list-item").innerHTML += input.value;
+
+
 }
+
+
+
 
 // //grabs add item button
 // const addItemBtn = document.getElementById("add-item-btn");
