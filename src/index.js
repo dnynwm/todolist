@@ -19,6 +19,35 @@ document.getElementById("app").innerHTML = `
 
 // /* ADD ITEM BUTTON CLICK EVENT */
 
+<<<<<<< Updated upstream
+=======
+let addBtn = document.querySelector("[type=image]");
+let input = document.querySelector(".add-item");
+
+addBtn.addEventListener("click", function(e) {
+	e.preventDefault();
+	createItem(input.value);
+	console.log(input.value);
+});
+
+// List Item Template
+
+function createItem(newItem) {
+	const template = `<div class="list-item">
+		<p>${newItem}</p>
+		</div>`;
+		console.log(template);
+		document.querySelector(".items-container").innerHTML += template;}
+
+//Function that creates item to be added
+//function appendItem(item) {
+//	createItem(input.value)
+  //create div + parent of div + class list-item + input.value
+  // document.createElement("div");
+
+
+
+>>>>>>> Stashed changes
 // //grabs add item button
 // const addItemBtn = document.getElementById("add-item-btn");
 
@@ -28,7 +57,7 @@ document.getElementById("app").innerHTML = `
 //   //appendChild(listItem)
 // }
 
-// //event to add new item with click 
+// //event to add new item with click
 // addItemBtn.addEventListener("click", function(
 //   newListItem(input);
 // ))
