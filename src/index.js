@@ -21,6 +21,23 @@ addBtn.addEventListener("click", function(e) {
 
 // List Item Template
 
+
+function createItem(newItem) {
+	const template = `<div class="list-item">
+		<p>${newItem}</p>
+		</div>`;
+		console.log(template);
+		document.querySelector(".items-container").innerHTML += template;}
+
+//Function that creates item to be added
+//function appendItem(item) {
+//	createItem(input.value)
+  //create div + parent of div + class list-item + input.value
+  // document.createElement("div");
+
+
+
+
 //Function that creates item to be added
 function createItem(item) {
   //create div + parent of div + class list-item + input.value
@@ -37,7 +54,7 @@ function createItem(item) {
 //   //appendChild(listItem)
 // }
 
-// //event to add new item with click 
+// //event to add new item with click
 // addItemBtn.addEventListener("click", function(
 //   newListItem(input);
 // ))
