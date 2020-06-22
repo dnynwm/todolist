@@ -1,5 +1,4 @@
 //GLOBAL STUFF
-
 /* TO DO
 - get the 'position' to reflex the index of the array 
 like in the reading_list exercise
@@ -51,15 +50,13 @@ class toDoList {
 
 // EVENTS
 
-// ADD TO DO 
+// ADD TO DO - id = addToDo
+let addToDo = document.getElementById("addToDo");
 
-// DELETE TO DO
+// DELETE TO DO - id = deleteBtn
+let deleteBtn = document.getElementById("deleteBtn");
 
-
-
-
-
-
+console.log(addToDo);
 
 
 
@@ -69,23 +66,22 @@ class toDoList {
 
 
 
+// //TESTING
+// const List1 = new toDoList();
+// const item1 = new toDoItem('Item1', false, 0);
+// const item2 = new toDoItem('Item2', false, 1);
 
-//TESTING
-const List1 = new toDoList();
-const item1 = new toDoItem('Item1', false, 0);
-const item2 = new toDoItem('Item2', false, 1);
-
-console.log(List1);
-List1.add(item1);
-List1.add(item2);
-
-
-item1.edit("blahblah");
-console.log(List1);
+// console.log(List1);
+// List1.add(item1);
+// List1.add(item2);
 
 
-List1.delete(item1.position, 1);
-console.log(List1);
+// item1.edit("blahblah");
+// console.log(List1);
+
+
+// List1.delete(item1.position, 1);
+// console.log(List1);
 
 
 //Checking that item methods work
