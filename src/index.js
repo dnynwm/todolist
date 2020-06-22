@@ -1,65 +1,81 @@
-// import "./styles.css";
+//GLOBAL STUFF
 
-/* GLOBAL VARIABLES */
-
-// const listItem = document.querySelectorAll(".list-item");
-// const box = document.querySelectorAll(".box");
-// //input from add item input
-// const input = document.querySelector("input").value;
-
-
-// /* ADD ITEM BUTTON CLICK EVENT */
-
-let addBtn = document.querySelector("[type=image]");
-let input = document.querySelector(".add-item");
-
-addBtn.addEventListener("click", function(e) {
-	e.preventDefault();
-	createItem(input.value);
-	console.log(input.value);
-});
-
-// List Item Template
-
-
-function createItem(newItem) {
-	const template = `<div class="list-item">
-		<p>${newItem}</p>
-		</div>`;
-		console.log(template);
-		document.querySelector(".items-container").innerHTML += template;}
-
-//Function that creates item to be added
-//function appendItem(item) {
-//	createItem(input.value)
-  //create div + parent of div + class list-item + input.value
-  // document.createElement("div");
+/* TO DO
+- get the 'position' to reflex the index of the array 
+like in the reading_list exercise
+- 
+*/
 
 
 
+//TO DO ITEM CLASS
 
-//Function that creates item to be added
-function createItem(item) {
-  //create div + parent of div + class list-item + input.value
-  // document.createElement("div");
-  document.querySelector(".list-item").innerHTML += input.value;
+class toDoItem {
+    constructor(title, checked, position) {
+        this.title = title;
+        this.checked = checked;
+        this.position = position;
+    }
+    //checks item as true or false (done or not)
+    check() {
+        if (this.checked === true) {
+            this.checked = false;
+        } else {
+            this.checked = true;
+        }
+    }
+    //items title of item
+    edit(value) {
+        this.title = value;
+    }
 }
 
-// //grabs add item button
-// const addItemBtn = document.getElementById("add-item-btn");
-
-// //sub-function to write new list item into HTML
-// function newListItem(input) {
-//   listItem.innerHTML = input;
-//   //appendChild(listItem)
-// }
-
-// //event to add new item with click
-// addItemBtn.addEventListener("click", function(
-//   newListItem(input);
-// ))
 
 
+//TO DO LIST CLASS
+class toDoList {
+    constructor() {
+        this.toDoArray = [];
+    }
+    delete(position) {
+        //delete a specific item, but how to call it by name?
+        this.toDoArray.splice(position, 1);
+    }
+    add(toDoItem) { 
+        //doesn't need to be 'toDoItem' as long as it agrees with the .push(toDoItem) part
+        this.toDoArray.push(toDoItem);
+        //how to figure out the toDoItem position for the array
+    }
+}
+
+//TESTING
+const List1 = new toDoList();
+const item1 = new toDoItem('Item1', false, 0);
+const item2 = new toDoItem('Item2', false, 1);
+
+console.log(List1);
+List1.add(item1);
+List1.add(item2);
 
 
-/* DELETE BUTTON CLICK EVENT */
+item1.edit("blahblah");
+console.log(List1);
+
+
+List1.delete(item1.position, 1);
+console.log(List1);
+
+
+//Checking that item methods work
+    // console.log(item1.title);
+    // List.add(item1);
+    // item1.check();
+    // item1.edit('boop');
+    // console.log(item1);
+
+//Checking that list methods work
+    // List.add('beep');
+    // List.add('covid');
+    // console.log(List);
+    // List.delete(0, 1, null); //using specific parameters for splice can do this, how can I do it in a simpler way? 
+    // console.log(List);
