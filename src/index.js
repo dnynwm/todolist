@@ -48,6 +48,28 @@ class toDoList {
     }
 }
 
+
+// EVENTS
+
+// ADD TO DO 
+
+// DELETE TO DO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //TESTING
 const List1 = new toDoList();
 const item1 = new toDoItem('Item1', false, 0);
