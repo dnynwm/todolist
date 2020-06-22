@@ -31,6 +31,7 @@ class toDoItem {
 }
 
 
+
 //TO DO LIST CLASS
 class toDoList {
     constructor() {
@@ -56,8 +57,10 @@ console.log(List1);
 List1.add(item1);
 List1.add(item2);
 
+
 item1.edit("blahblah");
 console.log(List1);
+
 
 List1.delete(item1.position, 1);
 console.log(List1);
