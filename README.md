@@ -22,4 +22,14 @@ We've made a simple to-do list with HTML, Bootstrap, and JavaScript.
 - Delete takes up x columns
 - 
 
-## 
+## Built With
+
+- HTML5
+- Bootstrap
+- JavaScript
+
+## Authors
+
+- Andre
+- Danny
+- Holden
