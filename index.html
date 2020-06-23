@@ -4,42 +4,58 @@
 <head>
 	<title>To Do List - Group 4</title>
 	<meta charset="UTF-8" />
-<!--BOOTSTRAP JS-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<!--BOOTSTRAP JS-->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
 
-<!--BOOTSTRAP CSS-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<!--BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-<!-- CUSTOM CSS
+	<!-- CUSTOM CSS
 <link rel="stylesheet" type="text/css" href="./src/styles.css"> -->
 
-<title>To Do List</title>
+	<title>To Do List</title>
 </head>
+
 <body>
-<div class="container mt-4">
-	<h1 class="display-4 text-center"><span class="text-primary">To Do</span>List</h1>
-	<form id="book-form"> <!--we need to change this later-->
-		<div class="form-group">
-			<!-- <label for="title">Title</label> -->
-			<input type="text" id="title" class="form-control">
+	<div class="container mt-4">
+		<h1 class="display-4 text-center"><span class="text-primary">To Do</span>List</h1>
+		<form id="book-form">
+			<div class="form-group">
+				<!-- <label for="title">Title</label> -->
+				<input type="text" id="title" class="form-control">
 
+			</div>
+			<input type="submit" value="Add To Do" class="btn btn-primary btn=block">
+		</form>
+		<!--Put new items here-->
+		<div class="row" id="todo-list">
+			<!--Checkbox-->
+			<div class="input-group mb-3 col-11">
+				<div class="input-group-prepend">
+					<div class="input-group-text">
+						<input type="checkbox" aria-label="Checkbox for following text input">
+					</div>
+				</div>
+				<input type="text" class="form-control" aria-label="Text input with checkbox">
+			</div>
+			<!--Delete Button to use-->
+			<button id="deleteBtn" class="btn btn-outline-danger col-1" type="button" value="Delete">Delete</button>
 		</div>
-		<!--ID for Add To Do Event-->
-		<input id="addToDo" type="submit" value="Add To Do" class="btn btn-primary btn=block">
-	</form>
-	<!--Put new items here-->
-	<div class="row" id="todo-list">
-		<div class="mt-4 col-8">Item</div>
-		<button type="button" name="check" class="mt-4 col-1 offset-1 btn btn-primary">Check</button>
-		<button id="deleteBtn" class="btn btn-outline-danger mt-4 col-1 offset-1" type="button" value="Delete">Delete</button>
+
+
 	</div>
-</div>
 
-
-<!--Custom JS-->
-<script src="src/index.js"></script>
+	<!--Custom JS-->
+	<script src="src/index.js"></script>
 </body>
 
 </html>
