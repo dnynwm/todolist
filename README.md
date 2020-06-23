@@ -25,7 +25,7 @@ We've made a simple to-do list with HTML, Bootstrap, and JavaScript.
 ## Built With
 
 - HTML5
-- Bootstrap
+- Bootstrap: https://getbootstrap.com/
 - JavaScript
 
 ## Authors

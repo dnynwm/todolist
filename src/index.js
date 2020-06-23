@@ -50,13 +50,22 @@ class toDoList {
 
 // EVENTS
 
+// Template for To Do Div
+
+
 // ADD TO DO - id = addToDo
 let addToDo = document.getElementById("addToDo");
+
+addToDo.addEventListener("click", function(){
+
+})
 
 // DELETE TO DO - id = deleteBtn
 let deleteBtn = document.getElementById("deleteBtn");
 
-console.log(addToDo);
+deleteBtn.addEventListener("click", function(){
+    
+})
 
 
 
