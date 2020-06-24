@@ -31,26 +31,15 @@
 		<form id="book-form">
 			<div class="form-group">
 				<!-- <label for="title">Title</label> -->
+				<!--INPUT FIELD-->
 				<input type="text" id="title" class="form-control">
 
 			</div>
-			<input type="submit" value="Add To Do" class="btn btn-primary btn=block">
+			<!--Add to do button-->
+			<input id="addToDoBtn" type="submit" value="Add To Do" class="btn btn-primary btn=block mb-4">
 		</form>
 		<!--Put new items here-->
-		<div class="row" id="todo-list">
-			<!--Checkbox-->
-			<div class="input-group mb-3 col-11">
-				<div class="input-group-prepend">
-					<div class="input-group-text">
-						<input type="checkbox" aria-label="Checkbox for following text input">
-					</div>
-				</div>
-				<input type="text" class="form-control" aria-label="Text input with checkbox">
-			</div>
-			<!--Delete Button to use-->
-			<button id="deleteBtn" class="btn btn-outline-danger col-1" type="button" value="Delete">Delete</button>
-		</div>
-
+		<div class="row" id="row"></div>
 
 	</div>
 
@@ -59,3 +48,14 @@
 </body>
 
 </html>
+
+<!-- <div class="input-group mb-3 col-11">
+	<div class="input-group-prepend">
+		<div class="input-group-text">
+			<input type="checkbox" aria-label="Checkbox for following text input">
+		</div>
+	</div>
+	<input type="text" class="form-control" aria-label="Text input with checkbox">
+</div>
+<!--Delete Button to use-->
+<!-- <button class="deleteBtn btn btn-outline-danger col-1" type="button" value="Delete">Delete</button> -->
