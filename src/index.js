@@ -39,7 +39,16 @@ class toDoList {
     // itemWrapper.innerHTML = htmlString;
     // list.appendChild(itemWrapper);
     }
+    // check(toDoItem) {
+    //     const checkbox = document.querySelector(input[type=checkbox]);
+    //     const list = document.getElementById("row");
+    //     const title = document.querySelector("input[value]");
+    //     if()
+    //     //if the box is checked, strike out text with <del></del>
+    //     //else (box isn't checked) no <del></del>
+    // }
 }
+
 
 // INSTANTIATE LIST1
 const List1 = new toDoList();
@@ -63,7 +72,15 @@ addToDoBtn.addEventListener("click", function(e){
         }
     List1.delete(e.target.parentElement); //parent element of delete button
  
-})
+    })
+
+    //CHECKBOX 
+    const checkbox = document.querySelector("input[type=checkbox]");
+    checkbox.addEventListener("click", function(e){
+        console.log("hi");
+    })
+    // List1.check(e.target.innerHTML); //parent element of delete button
+ 
 })
 
 //TO DO ITEM CLASS
