@@ -1,19 +1,78 @@
 //GLOBAL STUFF
 /* TO DO
-- get the 'position' to reflex the index of the array 
-like in the reading_list exercise
 - 
+
 */
 
+//TO DO LIST CLASS
+class toDoList {
+    constructor() {
+        this.toDoArray = [];
+    }
+    delete(toDoItem) {
+        toDoItem.remove();
+    }
+    add(toDoItem) { //this is linked to the eventListener List1.add(newItem); newItem and toDoItem are bound together
+        //doesn't need to be 'toDoItem' as long as it agrees with the .push(toDoItem) part
+        this.toDoArray.push(toDoItem);
+        const list = document.getElementById("row");
+        //  var itemWrapper = document.createElement("div");                 // Create a <div> node
+        const htmlString = `
+            <div class="input-group mt-2 col-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" aria-label="Checkbox for following text input">
+                    </div>
+                </div>
+                <input type="text" value="${toDoItem.title}" class="form-control" aria-label="Text input with checkbox">
+                <button class="deleteBtn btn btn-outline-danger col-2" type="button" value="Delete">Delete</button>
+            </div>`;
+        
+                            // <div class='item'>
+                            //     <input type="checkbox">
+                            //         ${toDoItem.title}
+                            //     <button class="deleteBtn btn btn-outline-danger" type="button" value="Delete">Delete</button>
+                            // </div>;
 
+    //takes empty div from 21 and adds htmlString inside
+    list.innerHTML += htmlString; //could also do 'list.innerHTML + htmlSpring'
+    // itemWrapper.innerHTML = htmlString;
+    // list.appendChild(itemWrapper);
+    }
+}
+
+// INSTANTIATE LIST1
+const List1 = new toDoList();
+
+//EVENTS
+    //ADD TO DO BUTTON
+const addToDoBtn = document.getElementById("addToDoBtn");
+addToDoBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    const title = document.getElementById("title").value;
+    // console.log(title);
+    const newItem = new toDoItem(title, checked = false); //new instance 
+    List1.add(newItem);
+
+    //DELETE BTN
+    const list = document.getElementById("row"); //need to access whole element not just deletebtn
+    list.addEventListener("click", function(e){
+           //makes sure that it works only on the Delete Button
+        if (e.target.innerText !== "Delete") {
+            return;
+        }
+    List1.delete(e.target.parentElement); //parent element of delete button
+ 
+})
+})
 
 //TO DO ITEM CLASS
 
 class toDoItem {
-    constructor(title, checked, position) {
+    constructor(title, checked) {
         this.title = title;
         this.checked = checked;
-        this.position = position;
+        // this.position = position; not needed
     }
     //checks item as true or false (done or not)
     check() {
@@ -31,78 +90,16 @@ class toDoItem {
 
 
 
-//TO DO LIST CLASS
-class toDoList {
-    constructor() {
-        this.toDoArray = [];
-    }
-    delete(position) {
-        //delete a specific item, but how to call it by name?
-        this.toDoArray.splice(position, 1);
-    }
-    add(toDoItem) { 
-        //doesn't need to be 'toDoItem' as long as it agrees with the .push(toDoItem) part
-        this.toDoArray.push(toDoItem);
+
+//Another way to add to do
+        // var itemWrapper = document.createElement("div");                 // Create a <div> node
+        // var textnode = document.createTextNode(toDoItem.title);   // Create a text node
+        // let checkBox = document.getElementById("")
+
+        // var x = document.createElement("INPUT");
+        // x.setAttribute("type", "checkbox");
+
+        // itemWrapper.appendChild(textnode);                              // Append the text to <li>
+        // itemWrapper.appendChild(x);
+        // container.appendChild(itemWrapper);     // Append <li> to <ul> with id="myList"
         //how to figure out the toDoItem position for the array
-    }
-}
-
-
-// EVENTS
-
-// Template for To Do Div
-
-
-// ADD TO DO - id = addToDo
-let addToDo = document.getElementById("addToDo");
-
-addToDo.addEventListener("click", function(){
-
-})
-
-// DELETE TO DO - id = deleteBtn
-let deleteBtn = document.getElementById("deleteBtn");
-
-deleteBtn.addEventListener("click", function(){
-    
-})
-
-
-
-
-
-
-
-
-
-// //TESTING
-// const List1 = new toDoList();
-// const item1 = new toDoItem('Item1', false, 0);
-// const item2 = new toDoItem('Item2', false, 1);
-
-// console.log(List1);
-// List1.add(item1);
-// List1.add(item2);
-
-
-// item1.edit("blahblah");
-// console.log(List1);
-
-
-// List1.delete(item1.position, 1);
-// console.log(List1);
-
-
-//Checking that item methods work
-    // console.log(item1.title);
-    // List.add(item1);
-    // item1.check();
-    // item1.edit('boop');
-    // console.log(item1);
-
-//Checking that list methods work
-    // List.add('beep');
-    // List.add('covid');
-    // console.log(List);
-    // List.delete(0, 1, null); //using specific parameters for splice can do this, how can I do it in a simpler way? 
-    // console.log(List);

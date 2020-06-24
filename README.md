@@ -20,7 +20,7 @@ We've made a simple to-do list with HTML, Bootstrap, and JavaScript.
 - To Do items should take of X amount of columns
 - Check takes up x columns
 - Delete takes up x columns
-- 
+- Checked item: struck out? 
 
 ## Built With
 
