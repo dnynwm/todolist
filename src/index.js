@@ -27,17 +27,17 @@ class toDoList {
                 <input type="text" value="${toDoItem.title}" class="form-control" aria-label="Text input with checkbox">
                 <button class="deleteBtn btn btn-warning col-2" type="button" value="Delete">Delete</button>
             </div>`;
-        
-                            // <div class='item'>
-                            //     <input type="checkbox">
-                            //         ${toDoItem.title}
-                            //     <button class="deleteBtn btn btn-outline-warning" type="button" value="Delete">Delete</button>
-                            // </div>;
 
-    //takes empty div from 21 and adds htmlString inside
-    list.innerHTML += htmlString; //could also do 'list.innerHTML + htmlSpring'
-    // itemWrapper.innerHTML = htmlString;
-    // list.appendChild(itemWrapper);
+        // <div class='item'>
+        //     <input type="checkbox">
+        //         ${toDoItem.title}
+        //     <button class="deleteBtn btn btn-outline-warning" type="button" value="Delete">Delete</button>
+        // </div>;
+
+        //takes empty div from 21 and adds htmlString inside
+        list.innerHTML += htmlString; //could also do 'list.innerHTML + htmlSpring'
+        // itemWrapper.innerHTML = htmlString;
+        // list.appendChild(itemWrapper);
     }
     // check(toDoItem) {
     //     const checkbox = document.querySelector(input[type=checkbox]);
@@ -57,30 +57,35 @@ class toDoList {
 const List1 = new toDoList();
 
 //EVENTS
-    //ADD TO DO BUTTON
+//ADD TO DO BUTTON
 const addToDoBtn = document.getElementById("addToDoBtn");
-addToDoBtn.addEventListener("click", function(e){
+addToDoBtn.addEventListener("click", function (e) {
     e.preventDefault();
     const title = document.getElementById("title").value;
     // console.log(title);
-    const newItem = new toDoItem(title, checked = false); //new instance 
-    List1.add(newItem);
-    toDoList.clearFields();
+    if (title != "") {
+        const newItem = new toDoItem(title, checked = false); //new instance 
+        List1.add(newItem);
+        toDoList.clearFields();
+    } else {
+        alert("Ups...Please enter a Todo!");
+    }
+    
 
     //DELETE BTN
     const list = document.getElementById("row"); //need to access whole element not just deletebtn
-    list.addEventListener("click", function(e){
-           //makes sure that it works only on the Delete Button
+    list.addEventListener("click", function (e) {
+        //makes sure that it works only on the Delete Button
         if (e.target.innerText !== "Delete") {
             return;
         }
-    List1.delete(e.target.parentElement); //parent element of delete button
- 
+        List1.delete(e.target.parentElement); //parent element of delete button
+
     })
 
     //CHECKBOX 
     const checkbox = document.querySelector("input[type=checkbox]");
-    checkbox.addEventListener("click", function(e){
+    checkbox.addEventListener("click", function (e) {
         console.log("hi");
     })
     // List1.check(e.target.innerHTML); //parent element of delete button
