@@ -1,6 +1,8 @@
 # To Do List - Group 4
 We've made a simple to-do list with HTML, Bootstrap, and JavaScript.
 
+![To Do List](/screenshot_todo.png)
+
 ## Objectives
 
 - input field
