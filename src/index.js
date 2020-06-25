@@ -25,7 +25,7 @@ class toDoList {
                     </div>
                 </div>
                 <input type="text" value="${toDoItem.title}" class="form-control" aria-label="Text input with checkbox">
-                <button class="deleteBtn btn btn-outline-danger col-2" type="button" value="Delete">Delete</button>
+                <button class="deleteBtn btn btn-danger col-2" type="button" value="Delete">Delete</button>
             </div>`;
         
                             // <div class='item'>
