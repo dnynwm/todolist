@@ -80,7 +80,7 @@ addToDoBtn.addEventListener("click", function(e){
         console.log("hi");
     })
     // List1.check(e.target.innerHTML); //parent element of delete button
- 
+
 })
 
 //TO DO ITEM CLASS
