@@ -2,6 +2,7 @@
 We've made a simple to-do list with HTML, Bootstrap, and JavaScript.
 
 ## Objectives
+
 - input field
 - add input to list
 - mark it as done
@@ -11,6 +12,13 @@ We've made a simple to-do list with HTML, Bootstrap, and JavaScript.
 - readme on github (installation steps if any, screenshot of app in README
 - quality comments for commits
 - separate out commit messages depending on whether it's logic or UI
+
+## Things We Learned
+
+- How to insert HTML with JavaScript 
+- More practice with Bootstrap
+- Collaboration
+- 
 
 ## Structure
 
