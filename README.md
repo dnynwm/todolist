@@ -20,10 +20,6 @@ We've made a simple to-do list with HTML, Bootstrap, and JavaScript.
 - How to insert HTML with JavaScript 
 - More practice with Bootstrap
 - Collaboration
-- 
-
-## Structure
-
 
 ## Styling
 
