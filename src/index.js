@@ -33,10 +33,10 @@ class toDoList {
             <div class="input-group mt-2 col-12">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
-                        <input type="checkbox" aria-label="Checkbox for following text input">
+                        <input id="checkbox" type="checkbox" aria-label="Checkbox for following text input">
                     </div>
                 </div>
-                <input style="text-decoration: inherit" type="text" value="${toDoItem.title}" class="form-control" aria-label="Text input with checkbox">
+                <input style="text-decoration: inherit" type="text" value="${toDoItem.title}" class="form-control toDoItemText" aria-label="Text input with checkbox">
                 <button class="deleteBtn btn btn-warning col-2" type="button" value="Delete">Delete</button>
             </div>`;
         
@@ -91,14 +91,16 @@ addToDoBtn.addEventListener("click", function(e){
     })
 
     //CHECKBOX 
-    const checkbox = document.querySelector("input[type=checkbox]");
-    // const toDoItemText = document.querySelector("input[type=text]");
+    const checkbox = document.getElementById("checkbox")
+    // const checkbox = document.querySelector("input[type=checkbox]");
+    // const toDoItemText = document.querySelector("input[class=form-control toDoItemText]");
     checkbox.addEventListener("click", function(e){
-        
+        List1.check(e.target.parentElement.parentElement.parentElement);
         //once you target element, set the style of that item
-        if(checkbox){
-            List1.check(e.target.parentElement.parentElement.parentElement);
-        } 
+        // if(checkbox){
+        //     // console.log(document.querySelector("input[class=form-control toDoItemText]"));
+            
+        // } 
         // List1.check(e.target.parentElement.parentElement.parentElement);
         
     })
