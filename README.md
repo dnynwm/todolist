@@ -32,6 +32,7 @@ We've made a simple to-do list with HTML, Bootstrap, and JavaScript.
 
 - HTML5
 - Bootstrap: https://getbootstrap.com/
+- Bootswatch: https://bootswatch.com/solar/
 - JavaScript
 
 ## Authors
