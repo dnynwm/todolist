@@ -12,6 +12,18 @@ class toDoList {
     delete(toDoItem) {
         toDoItem.remove();
     }
+    check(toDoItem) {
+        const checkbox = document.querySelector("input[type=checkbox]");
+        if(checkbox.checked === true) {
+            toDoItem.style.textDecoration = "line-through";
+        } else {
+            toDoItem.style.textDecoration = "none";
+        }
+         //can do colors too
+        //if this doesn't work, tell child to inherit styles from parent
+        //in id/class, textDecoration: inherit in css
+        //make uncheckmethod if needed, or make if/else statement in this method (textdecoration: none or whatever)
+    }
     add(toDoItem) { //this is linked to the eventListener List1.add(newItem); newItem and toDoItem are bound together
         //doesn't need to be 'toDoItem' as long as it agrees with the .push(toDoItem) part
         this.toDoArray.push(toDoItem);
@@ -24,7 +36,7 @@ class toDoList {
                         <input type="checkbox" aria-label="Checkbox for following text input">
                     </div>
                 </div>
-                <input type="text" value="${toDoItem.title}" class="form-control" aria-label="Text input with checkbox">
+                <input style="text-decoration: inherit" type="text" value="${toDoItem.title}" class="form-control" aria-label="Text input with checkbox">
                 <button class="deleteBtn btn btn-warning col-2" type="button" value="Delete">Delete</button>
             </div>`;
         
@@ -80,10 +92,17 @@ addToDoBtn.addEventListener("click", function(e){
 
     //CHECKBOX 
     const checkbox = document.querySelector("input[type=checkbox]");
+    // const toDoItemText = document.querySelector("input[type=text]");
     checkbox.addEventListener("click", function(e){
-        console.log("hi");
+        
+        //once you target element, set the style of that item
+        if(checkbox){
+            List1.check(e.target.parentElement.parentElement.parentElement);
+        } 
+        // List1.check(e.target.parentElement.parentElement.parentElement);
+        
     })
-    // List1.check(e.target.innerHTML); //parent element of delete button
+ 
 
 })
 
